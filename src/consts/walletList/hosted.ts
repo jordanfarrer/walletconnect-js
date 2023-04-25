@@ -1,9 +1,9 @@
 import { Wallet, WalletEventValue } from '../../types';
-import { WALLET_APP_IDS } from '../walletAppIds';
 import {
-  FIGURE_HOSTED_WALLET_URL_TEST,
   FIGURE_HOSTED_WALLET_URL_PROD,
+  FIGURE_HOSTED_WALLET_URL_TEST,
 } from '../urls';
+import { WALLET_APP_IDS } from '../walletAppIds';
 
 const FIGURE_HOSTED_IGNORED_EVENTS: WalletEventValue[] = [
   'walletconnect_connect',
@@ -34,7 +34,7 @@ export const FIGURE_HOSTED = {
       const top = window.outerHeight / 2 + window.screenY - height / 2;
       const left = window.outerWidth / 2 + window.screenX - width / 2;
       const windowOptions = `popup=1 height=${height} width=${width} top=${top} left=${left} resizable=1, scrollbars=1, fullscreen=0, toolbar=0, menubar=0, status=1`;
-      window.open(url, undefined, windowOptions);
+      window.open(url, "figure-hosted-wallet", windowOptions);
     }
   },
 } as Wallet;
@@ -63,7 +63,7 @@ export const FIGURE_HOSTED_TEST = {
       const top = window.outerHeight / 2 + window.screenY - height / 2;
       const left = window.outerWidth / 2 + window.screenX - width / 2;
       const windowOptions = `popup=1 height=${height} width=${width} top=${top} left=${left} resizable=1, scrollbars=1, fullscreen=0, toolbar=0, menubar=0, status=1`;
-      window.open(url, undefined, windowOptions);
+      window.open(url, "figure-hosted-wallet-test", windowOptions);
     }
   },
 } as Wallet;
